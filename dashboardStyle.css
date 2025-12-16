@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%); 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    padding: 20px;
+}
+
+#loginForm {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#loginForm h2 {
+    color: #2e7d32; 
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: 0.3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2e7d32;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* --- Dashboard Styling --- */
+#dashboard {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    animation: slideUp 0.5s ease-out;
+}
+
+#dashboard h1 {
+    color: #1b5e20;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.flex-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 250px; 
+    border-top: 5px solid #4caf50; 
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+.card div[id] {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.card span {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#logoutBtn {
+    width: auto;
+    padding: 10px 30px;
+    background-color: #ff5252; 
+}
+
+#logoutBtn:hover {
+    background-color: #d32f2f;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .flex-card {
+        flex-direction: column;
+    }
+    
+    #dashboard h1 {
+        font-size: 1.5rem;
+    }
+}
